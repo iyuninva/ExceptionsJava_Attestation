@@ -69,12 +69,12 @@ public class GetFile {
         File dir;
         try {
             dir = new File(GetDirectory.PathDirectory());
-            List<File> lst = new ArrayList<>();
             for (File file : dir.listFiles()) {
                 if (file.isFile()) {
-                    lst.add(file);
+                    System.out.println(file);
                 }
-            } System.out.println(lst);
+            }
+            System.out.println("--- Search End ---");
         } catch (IOException e) {
             e.printStackTrace();
         }

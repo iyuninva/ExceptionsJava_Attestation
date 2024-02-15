@@ -6,10 +6,10 @@ import java.text.SimpleDateFormat;
 public class DataValidity {
 
     public static boolean validityDataUser(String[] lineData) {
-       if(validityBasicDataUser(lineData) == true) {
-            if(validityDateUser(lineData) == true) {
-                if(validityPhoneNomberUser(lineData) == true) {
-                    if(validityGenderUser(lineData) == true) {
+        if (validityBasicDataUser(lineData) == true) {
+            if (validityDateUser(lineData) == true) {
+                if (validityPhoneNomberUser(lineData) == true) {
+                    if (validityGenderUser(lineData) == true) {
                         return true;
                     } else {
                         System.out.println("ERROR: input gender");
@@ -23,10 +23,10 @@ public class DataValidity {
                 System.out.println("ERROR: input birthdate");
                 return false;
             }
-       } else {
-        System.out.println("ERROR: input basic data user");
-        return false;
-       }
+        } else {
+            System.out.println("ERROR: input basic data user");
+            return false;
+        }
     }
 
     public static boolean validityBasicDataUser(String[] lineData) {
@@ -71,8 +71,8 @@ public class DataValidity {
 
     public static boolean validityPhoneNomberUser(String[] lineData) {
         String temp = lineData[4].replaceAll("[^\\d]", "");
-        if(temp.length() == 11) {
-            if(temp.matches("\\d+")) {
+        if (temp.length() == 11) {
+            if (temp.matches("\\d+")) {
                 return true;
             } else {
                 System.out.println("ERROR: not numbers");
@@ -86,7 +86,7 @@ public class DataValidity {
 
     public static boolean validityGenderUser(String[] lineData) {
         String temp = lineData[5].toLowerCase();
-        if(temp.equals("m") || temp.equals("f"))  {
+        if (temp.equals("m") || temp.equals("f")) {
             return true;
         } else {
             System.out.println("ERROR: non f/m");
