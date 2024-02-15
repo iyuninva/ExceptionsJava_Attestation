@@ -14,11 +14,11 @@ public class ViewUser {
                 case ADD:
                     GetFile.newUser();
                     break;
-                case READ:
-                    break;
-                case LIST:
+                case LIST: // будет дорабатываться
+                    GetFile.SearchFileUser();
                     break;
                 case DELETE:
+                    GetFile.DeleteFileUser();
                     break;
                 case EXIT:
                     System.out.println(" --- Program Exit --- ");
@@ -28,12 +28,10 @@ public class ViewUser {
             System.err.println("\nERROR: input commands - " + e.getMessage() + "\n");
             runProgramm();
         }
-
     }
 
     public static void infoCommands() {
         System.out.println(
-                " - ADD (Добавить пользователя) \n - READ (Найти пользователя) \n - LIST (Выдать полный список пользователей) \n - DELETE (Удалить пользователя) \n - EXIT (Закрыть программу)\n");
+                " - ADD (Добавить пользователя) \n - LIST (Выдать полный список пользователей) \n - DELETE (Удалить пользователя) \n - EXIT (Закрыть программу)\n");
     }
-
 }
